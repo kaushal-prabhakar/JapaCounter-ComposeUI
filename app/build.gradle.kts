@@ -83,7 +83,7 @@ dependencies {
     ksp("androidx.room:room-compiler:2.6.1")
 
     implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.46.1")
+    kapt("com.google.dagger:hilt-compiler:2.48.1")
     kapt("androidx.hilt:hilt-compiler:1.2.0")
 
     implementation("com.jakewharton.timber:timber:5.0.1")
@@ -92,6 +92,12 @@ dependencies {
     ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
 
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+
+    val composeBom = platform("androidx.compose:compose-bom:2024.03.00")
+    implementation(composeBom)
+
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.ui:ui-tooling-preview")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
